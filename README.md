@@ -162,4 +162,8 @@ $\beta_{n}$ are coefficients estimated from the data
 
 $K=12$ is the number of spline basis functions
 
-#
+# Model Estimation
+The model is estimated using penalized likelihood optimization:
+
+$$ min \left(\sum(y_{i}-\hat y_{i})-\lambda \int (f''(x))^2dx \right) $$
+
