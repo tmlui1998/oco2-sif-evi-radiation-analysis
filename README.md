@@ -14,7 +14,7 @@ Longitude: 23.0 – 26.5
 # Data Sources
 SIF measurements are obtained from the Orbiting Carbon Observatory-2 (OCO-2) mission. These data provide direct satellite observations of vegetation photosynthetic activity.
 
-EVI and SSR are obtained from Google Earth Engine. These layers represent vegetation greenness and available incoming radiation.
+EVI (MODIS) and SSR (ERA5-Land) are obtained from Google Earth Engine. These layers represent vegetation greenness and available incoming radiation.
 
 The data are shown below:
 
@@ -239,6 +239,6 @@ Regions with greener and denser vegetation tend to exhibit stronger fluorescence
 </p>
 Solar radiation represents the primary energy source driving photosynthesis. However, the relationship between them is more complex than the vegetation relationship.
 
-The hexbin density plot of SIF versus solar radiation shows that observations occur in distinct vertical bands corresponding to different monthly radiation levels. Within each radiation band, SIF values vary widely. For instance, even at similar radiation levels, SIF may range from negative values to over 1.5. This variation indicates that radiation alone cannot fully explain fluorescence emissions.
+The hexbin density plot of SIF versus solar radiation shows that observations occur in distinct vertical bands corresponding to different monthly radiation levels. Within each radiation band, SIF values vary widely. For instance, even at similar radiation levels, SIF may range from negative values to over 1.5. This variation indicates that radiation alone cannot fully explain fluorescence emissions. Part of this irregular pattern can be explained by the spatial resolution of the radiation dataset. The ERA5-Land satellite has a resolution of 9 km, which is substantially coarser than the OCO-2 satellite resolution of 1.3km. As a result, many nearby SIF observations share the same radiation value, producing the vertical clusters seen in the hexbin plot.
 
 In general, SIF increases as radiation rises. Solar radiation sets the upper limit of photosynthetic activity, but vegetation structure and seasonal conditions determine how efficiently plants use this energy. Plants cannot indefinitely increase photosynthesis as radiation increases. Instead, photosynthesis eventually saturates, meaning additional sunlight does not lead to higher photosynthetic activity.
