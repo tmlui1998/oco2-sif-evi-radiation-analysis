@@ -231,3 +231,14 @@ The highest concentration of observations occurs within the EVI range of approxi
 Areas with higher vegetation density (EVI > 0.45) display substantially larger fluorescence signals, sometimes exceeding 1.0. This indicates that denser vegetation canopies tend to emit stronger fluorescence signals because they contain more chlorophyll and higher photosynthetic capacity.
 
 Regions with greener and denser vegetation tend to exhibit stronger fluorescence signals, reflecting higher levels of photosynthetic activity.
+
+## Relationship Between SIF and Solar Radiation
+
+<p float="left", align="middle">
+  <img src="/figures/hexbin_sif_vs_radiation_all_months.png" width="80%" />
+</p>
+Solar radiation represents the primary energy source driving photosynthesis. However, the relationship between them is more complex than the vegetation relationship.
+
+The hexbin density plot of SIF versus solar radiation shows that observations occur in distinct vertical bands corresponding to different monthly radiation levels. Within each radiation band, SIF values vary widely. For instance, even at similar radiation levels, SIF may range from negative values to over 1.5. This variation indicates that radiation alone cannot fully explain fluorescence emissions.
+
+In general, SIF increases as radiation rises. Solar radiation sets the upper limit of photosynthetic activity, but vegetation structure and seasonal conditions determine how efficiently plants use this energy. Plants cannot indefinitely increase photosynthesis as radiation increases. Instead, photosynthesis eventually saturates, meaning additional sunlight does not lead to higher photosynthetic activity.
