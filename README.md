@@ -128,3 +128,38 @@ EVI and SSR are obtained from Google Earth Engine. These layers represent vegeta
                      └────────────────────────┘
 
 ### Statistical Model
+A Generalized Additive Model (GAM) is used to model nonlinear relationships between SIF and environmental variables. The model used in this study is:
+
+$$ SIF_{mean}=s(EVI)+s(\log_{10}(SSR))+f(month)+\varepsilon $$
+
+Where:
+
+|                      |                                                        |
+| -------------------  | ------------------------------------------------------ |
+| $SIF_{mean}$        | Mean solar-induced fluorescence in a spatial grid cell |
+| $s(EVI)$            | Smooth nonlinear function of vegetation index          |
+| $s(\log_{10}(SSR))$ | Smooth nonlinear function of solar radiation           |
+| $f(month)$          | Categorical factor representing seasonal variation     |
+| $\varepsilon$       | Random residual error                                  |
+
+## Predictor
+The EVI represents the vegetation. It is derived from MODIS satellite observations and serves as a proxy for vegetation density and photosynthetic capacity.
+
+The SSR represents the amount of incoming energy available for photosynthesis. Because radiation values are highly skewed, the predictor is log transformed.
+
+Vegetation productivity varies strongly across the growing season. To account for this, the model includes month as a categorical predictor.
+
+# Smoothing Function
+The smoothing function is applied to $EVI$ and  $log_{10}(SSR)$. The smooth terms are estimated using penalized splines:
+
+$$ s(x)=\sum_{n=1}^{K}\beta_{n}B_{n}(x) $$
+
+Where:
+
+$B_{n}(x)$ are spline basis functions,
+
+$\beta_{n}$ are coefficients estimated from the data
+
+$K=12$ is the number of spline basis functions
+
+#
